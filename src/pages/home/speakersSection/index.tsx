@@ -10,7 +10,7 @@ function SpeakersSection() {
 	const location = useLocation();
 
 	const url = new URL(
-		'/api/v0/main-speakers',
+		'/api/v1/main-speakers',
 		import.meta.env.VITE_DATABASE_LOCAL,
 	);
 

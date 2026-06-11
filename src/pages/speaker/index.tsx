@@ -23,7 +23,7 @@ function SpeakerProfile() {
 	}, [id]);
 
 	const url = new URL(
-		'/api/v0/speaker/' + id,
+		'/api/v1/speaker/' + id,
 		import.meta.env.VITE_DATABASE_LOCAL,
 	);
 

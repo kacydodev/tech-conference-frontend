@@ -10,7 +10,7 @@ type SpeakersResponseType = SpeakerCardType[];
 function Speakers() {
 	const location = useLocation();
 
-	const url = new URL('/api/v0/speakers', import.meta.env.VITE_DATABASE_LOCAL);
+	const url = new URL('/api/v1/speakers', import.meta.env.VITE_DATABASE_LOCAL);
 
 	const { data } = useQuery({
 		queryKey: ['speakers', url],
