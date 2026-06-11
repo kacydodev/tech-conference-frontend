@@ -4,10 +4,8 @@ import type { Track } from '../../../types';
 import { trackColors } from '../../../utils';
 
 function TracksSection() {
-	const url = new URL(
-		'/api/v1/main-tracks',
-		import.meta.env.VITE_DATABASE_REMOTE,
-	);
+	const url = new URL('/api/v1/tracks', import.meta.env.VITE_DATABASE_REMOTE);
+	url.searchParams.set('isFeatured', 'true');
 
 	const { data, isLoading, error } = useQuery({
 		queryKey: ['main-tracks', url],

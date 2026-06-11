@@ -8,7 +8,7 @@ import { Link } from 'react-router';
 
 function TalksSection() {
 	const url = new URL(
-		'/api/v1/main-talks',
+		'/api/v1/talks/featured',
 		import.meta.env.VITE_DATABASE_REMOTE,
 	);
 

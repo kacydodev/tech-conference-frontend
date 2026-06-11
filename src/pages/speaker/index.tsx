@@ -23,7 +23,7 @@ function SpeakerProfile() {
 	}, [id]);
 
 	const url = new URL(
-		'/api/v1/speaker/' + id,
+		`/api/v1/speakers/${id}`,
 		import.meta.env.VITE_DATABASE_REMOTE,
 	);
 
@@ -32,6 +32,7 @@ function SpeakerProfile() {
 		queryFn: async () => {
 			const response = await fetch(url.toString());
 			const data = await response.json();
+			console.log('data: ', data);
 			const talksClean = await JSON.parse(data.talks);
 			const newData: SpeakerProfileResponse = { ...data, talks: talksClean };
 			return newData;

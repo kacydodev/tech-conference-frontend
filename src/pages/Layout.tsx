@@ -29,7 +29,7 @@ function Footer() {
 	const url = new URL('/api/v1/tracks', import.meta.env.VITE_DATABASE_REMOTE);
 
 	const { data } = useQuery({
-		queryKey: ['main-talks', url],
+		queryKey: ['tracks', url],
 		queryFn: async () => {
 			const response = await fetch(url.toString());
 			const data: Track[] = await response.json();

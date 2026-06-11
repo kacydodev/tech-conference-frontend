@@ -9,10 +9,8 @@ import { useLocation } from 'react-router';
 function SpeakersSection() {
 	const location = useLocation();
 
-	const url = new URL(
-		'/api/v1/main-speakers',
-		import.meta.env.VITE_DATABASE_REMOTE,
-	);
+	const url = new URL('/api/v1/speakers', import.meta.env.VITE_DATABASE_REMOTE);
+	url.searchParams.set('isFeatured', 'true');
 
 	const { data } = useQuery({
 		queryKey: ['main-speakers', url],
