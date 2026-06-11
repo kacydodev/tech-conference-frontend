@@ -1,11 +1,11 @@
 import { useQuery } from '@tanstack/react-query';
 import { useSearchParams } from 'react-router';
 import { Button } from '../../components/NewButton';
-import { RadioButton } from '../../components/RadioButton';
+import type { Talk } from '../../types';
 
 function Talks() {
 	// localhost:3000/schedule?speaker_id=sp_0&track_id=tr_0
-	const [searchParams, setSearchParams] = useSearchParams();
+	const [searchParams] = useSearchParams();
 	console.log('searchParams: ', Object.fromEntries(searchParams));
 
 	const url = new URL('/api/v1/talks', import.meta.env.VITE_DATABASE_REMOTE);
@@ -15,7 +15,7 @@ function Talks() {
 		queryKey: ['talks', url],
 		queryFn: async () => {
 			const response = await fetch(url.toString());
-			const data = await response.json();
+			const data: Talk[] = await response.json();
 			return data;
 		},
 	});

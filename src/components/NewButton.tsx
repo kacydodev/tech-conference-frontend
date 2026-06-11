@@ -1,10 +1,10 @@
-import { useState, type ReactNode } from 'react';
+import { type ReactNode } from 'react';
 
 export const Button = ({
 	children,
 	variants = 'default',
 	colors = 'black',
-	toggle = false,
+	// toggle = false,
 	...props
 }: {
 	children: ReactNode;
@@ -12,7 +12,7 @@ export const Button = ({
 	colors?: 'black' | 'white';
 	toggle?: boolean;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>) => {
-	const [isActive, setActive] = useState(false);
+	// const [isActive, setActive] = useState(false);
 
 	if (variants === 'link') {
 		return (
