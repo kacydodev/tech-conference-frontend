@@ -8,7 +8,7 @@ function Talks() {
 	const [searchParams, setSearchParams] = useSearchParams();
 	console.log('searchParams: ', Object.fromEntries(searchParams));
 
-	const url = new URL('/api/v1/talks', import.meta.env.VITE_DATABASE_LOCAL);
+	const url = new URL('/api/v1/talks', import.meta.env.VITE_DATABASE_REMOTE);
 	url.search = searchParams.toString();
 
 	const { data } = useQuery({

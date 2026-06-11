@@ -4,7 +4,7 @@ import { SectionHeader, Title } from '../../../components/Typography';
 import { Button } from '../../../components/NewButton';
 
 function Keynote() {
-	const url = new URL('/api/v1/keynote', import.meta.env.VITE_DATABASE_LOCAL);
+	const url = new URL('/api/v1/keynote', import.meta.env.VITE_DATABASE_REMOTE);
 
 	const { data, isLoading, error } = useQuery({
 		queryKey: ['keynote', url],

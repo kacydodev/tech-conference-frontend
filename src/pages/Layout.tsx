@@ -26,7 +26,7 @@ function Header() {
 }
 
 function Footer() {
-	const url = new URL('/api/v1/tracks', import.meta.env.VITE_DATABASE_LOCAL);
+	const url = new URL('/api/v1/tracks', import.meta.env.VITE_DATABASE_REMOTE);
 
 	const { data } = useQuery({
 		queryKey: ['main-talks', url],

@@ -5,7 +5,7 @@ import { HeroHeader } from '../../../components/Typography';
 function TitleCard() {
 	const url = new URL(
 		'/api/v1/conference',
-		import.meta.env.VITE_DATABASE_LOCAL,
+		import.meta.env.VITE_DATABASE_REMOTE,
 	);
 
 	const { data, isLoading, error } = useQuery({

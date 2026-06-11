@@ -11,7 +11,7 @@ function SpeakersSection() {
 
 	const url = new URL(
 		'/api/v1/main-speakers',
-		import.meta.env.VITE_DATABASE_LOCAL,
+		import.meta.env.VITE_DATABASE_REMOTE,
 	);
 
 	const { data } = useQuery({

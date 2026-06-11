@@ -6,7 +6,7 @@ import { trackColors } from '../../../utils';
 function TracksSection() {
 	const url = new URL(
 		'/api/v1/main-tracks',
-		import.meta.env.VITE_DATABASE_LOCAL,
+		import.meta.env.VITE_DATABASE_REMOTE,
 	);
 
 	const { data, isLoading, error } = useQuery({

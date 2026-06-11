@@ -9,7 +9,7 @@ import { Link } from 'react-router';
 function TalksSection() {
 	const url = new URL(
 		'/api/v1/main-talks',
-		import.meta.env.VITE_DATABASE_LOCAL,
+		import.meta.env.VITE_DATABASE_REMOTE,
 	);
 
 	const { data, isLoading, error } = useQuery({

@@ -24,7 +24,7 @@ function SpeakerProfile() {
 
 	const url = new URL(
 		'/api/v1/speaker/' + id,
-		import.meta.env.VITE_DATABASE_LOCAL,
+		import.meta.env.VITE_DATABASE_REMOTE,
 	);
 
 	const { data } = useQuery({
